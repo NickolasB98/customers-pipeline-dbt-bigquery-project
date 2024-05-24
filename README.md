@@ -134,6 +134,10 @@ Value: the path to your private key in json format
 
 #### Setting Up DBT (after the installation in the python env):
 
+Set up on your machine: run pip install dbt-core dbt-bigquery
+
+<img width="526" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/ac32a579-ad79-451e-b783-9c866df1bce5">
+
 Create a DBT Project: Run dbt init [project_name] to initialize a DBT project.
 
 Verify Connection: Run dbt debug to verify the connection between DBT and BigQuery.
@@ -158,12 +162,47 @@ The instructions demonstrate adding a custom dataset (dbt-tutorial) and creating
 
 <img width="565" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/061a88b4-b308-46f4-9744-33a2110bad78">
 
+**Using a Clean Seed for Reliable Testing**
+
+This project utilizes a clean CSV file, stadium_cleaned.csv found in folder:seeds, as a seed to populate the development environment in BigQuery. Seeds provide initial data for testing and development purposes, allowing us to verify our data transformation logic without relying on potentially messy or incomplete production data.
+
+The seed file, containing cleaned stadium data, ensures a consistent and well-structured dataset for our tests. This helps us identify any issues with our DBT models early in the development cycle, before they impact production data.
+
+Here are the key benefits of using a clean seed:
+
+Reliable Testing: Consistent data allows for repeatable testing of our DBT models.
+Early Error Detection: Issues in the transformation logic are easier to identify with clean data.
+Isolates Production Data: Testing doesn't affect or modify actual production data.
+By leveraging a clean seed file, we can ensure the quality and reliability of our data transformation process before deploying it to production.
+
+After running dbt seed, this is the result in BigQuery
+
+<img width="1109" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/66b7d4cd-11f5-4900-9105-9a47f37a1e02">
+
 
 **Querying Output on BigQuery**
 
 Use the BigQuery console to query the output data. The example query provided retrieves the first 1000 rows from the customer_orders table within your dataset.
 
 <img width="1437" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/0a416e09-d5ed-48f1-8f83-e5613b9462cf">
+
+
+**Running Quality Check in DBT**
+
+Run the script 
+                dbt test
+<img width="765" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/e8064d12-e60b-4116-9e99-9fc348f1a74e">
+
+**Generating the DBT Docs**
+
+Run the script 
+                dbt docs generate
+Then            
+                dbt docs serve
+
+This will be the output of your generating documents in your local DBT.
+
+<img width="1337" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/ce114635-643c-4753-89de-dd7240a006c5">
 
 
 ### Connecting Looker Studio to BigQuery:
