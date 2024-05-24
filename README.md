@@ -9,12 +9,15 @@ In today's data-driven world, DBT and BigQuery have become essential tools for d
 
 **Key Features**
 
-DBT:
+##### DBT:
+
 SQL-based transformations (familiar language for data professionals)
 Version control with Git for code management
 Built-in testing capabilities for data quality assurance
 Automatic documentation generation for data models
-BigQuery:
+
+##### BigQuery:
+
 Serverless architecture eliminates infrastructure management needs
 Real-time analytics for up-to-date data insights
 Automatic backups and easy data restores
@@ -40,7 +43,7 @@ Develop DBT Models: Write your DBT models and tests.
 Run DBT Transformations: Execute DBT transformations and tests against your BigQuery dataset.
 Detailed Instructions
 
-Setting Up BigQuery:
+**Setting Up BigQuery:**
 
 GCP Account: Sign up for a free GCP account with a $300 credit.
 Create a Project: In the GCP Console, navigate to the dashboard and create a new project.
@@ -61,11 +64,11 @@ If you encounter the error "DBT: Package names must be unique," refer to the pro
 
 Upon successful execution of dbt run, you should see your models populated within your BigQuery dataset.
 
-Using Multiple Datasets
+**Using Multiple Datasets**
 
 The instructions demonstrate adding a custom dataset (dbt-tutorial) and creating a new model (customer_orders.sql) to showcase working with multiple datasets.
 
-Querying Output on BigQuery
+**Querying Output on BigQuery**
 
 Use the BigQuery console to query the output data. The example query provided retrieves the first 1000 rows from the customer_orders table within your dataset.
 
