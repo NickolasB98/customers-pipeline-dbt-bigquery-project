@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: customers
+    description: "Customers Table"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique  # Assuming you want to test for unique IDs
+          - not_null
+      - name: first_name
+        description: "The first name of the customer"
+        tests:
+          - not_null
+      - name: last_name
+        description: "The last name of the customer"
+        tests:
+          - not_null
+        
+        
+        
+
+ 
