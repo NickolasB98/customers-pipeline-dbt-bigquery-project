@@ -142,6 +142,9 @@ Use filters and drill-downs to analyze specific data segments.
 
 Share your reports and dashboards with collaborators for better decision-making.
 
+<img width="895" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/70200d4d-77f7-4ae5-80a3-3fd56204f207">
+
+
 [gcp-bigquery-with-dbt-project.pdf](https://github.com/NickolasB98/dbt-bigquery-de-project/files/15435769/gcp-bigquery-with-dbt-project.pdf)
 
 
