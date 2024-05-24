@@ -3,6 +3,9 @@
 This project demonstrates a practical use case for combining DBT (Data Build Tool) and Google BigQuery for data transformation and warehousing.
 BigQuery is then connected to Google Looker Studio for BI Visualization.
 
+![Uploading image.png…]()
+
+
 **Introduction**
 
 In today's data-driven world, DBT and BigQuery have become essential tools for data engineers and analysts. DBT simplifies data transformation with its SQL-based approach, while BigQuery offers a powerful and scalable data warehouse. Together, they provide a streamlined workflow for managing data pipelines.
