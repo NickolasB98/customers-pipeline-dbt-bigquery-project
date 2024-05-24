@@ -54,7 +54,9 @@ Speed: DBT leverages BigQuery's power for fast data processing.
 
 ### Getting Started
 
-Set up a Google Cloud Account: Create a GCP account and a BigQuery dataset.
+**Overview**
+
+Set up a Google Cloud Account: Create a GCP account and a BigQuery instance.
 
 Install DBT: Install DBT and configure it to connect to your BigQuery instance.
 
@@ -62,7 +64,10 @@ Develop DBT Models: Write your DBT models and tests.
 
 Run DBT Transformations: Execute DBT transformations and tests against your BigQuery dataset.
 
-**Detailed Instructions**
+Visualize Transformed Data: Connect Looker Studio to BigQuery instance and create visualizations through drag-and-drop interactive actions.
+
+
+### Detailed Instructions
 
 #### Python Environment Setup
 
@@ -85,40 +90,81 @@ Check this link for more information:
 ["https://pypi.org/project/dbt/"]
 
 
-### Setting Up BigQuery:
+#### Setting Up BigQuery:
 
 GCP Account: Sign up for a free GCP account with a $300 credit.
 
 Create a Project: In the GCP Console, navigate to the dashboard and create a new project.
 
+<img width="751" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/fd11f622-e657-4843-9efb-9c82b4d8b25a">
+
+
 Enable BigQuery API: In the GCP Console, locate and enable the BigQuery API.
+
+<img width="689" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/689b4d76-8c44-4d48-a769-4cd0183af0f0">
 
 Access BigQuery Console: Access the BigQuery console directly from the GCP dashboard.
 
-Create a Service Account: Create a service account with Owner role in your project and download its private key for DBT connection.
+<img width="1360" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/36493e12-95b2-412d-8675-1f0a96ee8f65">
 
+Create a Service Account: 
 
-### Setting Up DBT:
+Create a Secure Service Account for DBT:
 
-Install DBT: Use pip install dbt-core dbt-bigquery to install DBT with the BigQuery adapter.
+To securely connect DBT to your BigQuery instance, you'll need to create a service account with the appropriate permissions. This service account acts like a dedicated user within your project, allowing DBT to interact with BigQuery data.
 
-Create a DBT Project: Run dbt init dbt_bigquery to initialize a DBT project.
+Steps:
+
+Navigate to IAM & Admin: Access the Google Cloud Platform (GCP) Console and navigate to the "IAM & Admin" section. This section manages identity and access controls for your project.
+
+Create a Service Account: Click the "Create Service Account" button. This will initiate the creation process for a new service account.
+
+Assign the Owner Role: During creation, ensure you grant the "Owner" role to the service account. This role provides the highest level of access within the project, allowing DBT to perform all necessary operations on your BigQuery data.
+
+Download the Private Key: Once the service account is created, navigate to the "Keys" tab and click "ADD KEY" followed by "Create New Key." This will download a private key file to your computer. Keep this file secure, as it will be used to authenticate DBT with BigQuery.
+
+<img width="1088" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/a3985462-606a-4f77-a1a9-2c8c7736137f">
+
+Put this key inside the profiles.yml file, which you can find after downloading dbt in the path: Users/user/.dbt/profiles.yml
+
+<img width="526" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/81851dd7-ca1d-4d93-8199-e7cd95010630">
+
+Key: keyfile
+Value: the path to your private key in json format
+
+#### Setting Up DBT (after the installation in the python env):
+
+Create a DBT Project: Run dbt init [project_name] to initialize a DBT project.
 
 Verify Connection: Run dbt debug to verify the connection between DBT and BigQuery.
 
+<img width="634" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/74e47ffe-8733-41ae-9d03-4a439c1159dc">
+
 Run DBT Setup: Execute dbt run to run your DBT project.
+
+<img width="1081" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/a162f6ed-99bc-43eb-b7e5-031b6bc30ab9">
+
 
 **Expected Output:**
 
 Upon successful execution of dbt run, you should see your models populated within your BigQuery dataset.
 
+<img width="291" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/9ced66d0-4b87-43e0-873c-1af444bfe6d1">
+
+
 **Using Multiple Datasets**
 
-The instructions demonstrate adding a custom dataset (dbt-tutorial) and creating a new model (customer_orders.sql) to showcase working with multiple datasets.
+The instructions demonstrate adding a custom dataset (dbt-tutorial) and creating a new model through joins (eg. customer_orders.sql) to showcase working with multiple datasets.
+
+<img width="565" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/061a88b4-b308-46f4-9744-33a2110bad78">
+
 
 **Querying Output on BigQuery**
 
 Use the BigQuery console to query the output data. The example query provided retrieves the first 1000 rows from the customer_orders table within your dataset.
+
+<img width="1437" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/0a416e09-d5ed-48f1-8f83-e5613b9462cf">
+
 
 ### Connecting Looker Studio to BigQuery:
 
@@ -132,13 +178,21 @@ Select your project and dataset containing the transformed data from your DBT mo
 
 Click "Connect."
 
+<img width="1044" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/2036fc61-cac6-422b-984e-18b45386dc2d">
+
+
 ### Data Visualization in Looker Studio:
 
 Once connected, explore your data tables in Looker Studio.
 
 Drag and drop fields to create charts and visualizations (e.g., bar charts, line charts, pie charts, tables).
 
+<img width="476" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/32f0f8f1-2bf7-423e-9483-7688a1e7e8fd">
+
 Use filters and drill-downs to analyze specific data segments.
+
+<img width="681" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/2089afa4-99bd-426b-94bc-dc5408febf47">
+
 
 Share your reports and dashboards with collaborators for better decision-making.
 
