@@ -32,12 +32,14 @@ Extract: Data is retrieved from various sources and loaded into BigQuery.
 Transform with DBT: SQL-based transformations are written and tested within DBT, executing directly in BigQuery.
 Load: Transformed data resides in BigQuery, ready for analysis.
 Analyze: Any BI tool can be used to analyze the prepared data.
+
 Benefits:
 
 Scalability: Both DBT and BigQuery handle large datasets effectively.
 Maintainability: DBT's version control and testing ensure transformation accuracy.
 Cost-Effectiveness: DBT is open-source, and BigQuery offers a pay-as-you-go model.
 Speed: DBT leverages BigQuery's power for fast data processing.
+
 Getting Started
 
 Set up a Google Cloud Account: Create a GCP account and a BigQuery dataset.
@@ -45,6 +47,27 @@ Install DBT: Install DBT and configure it to connect to your BigQuery instance.
 Develop DBT Models: Write your DBT models and tests.
 Run DBT Transformations: Execute DBT transformations and tests against your BigQuery dataset.
 Detailed Instructions
+
+## Python Environment Setup
+
+This project uses a virtual environment to isolate its dependencies. It's recommended to use virtual environments to manage project-specific dependencies and avoid conflicts with other projects on your system.
+
+Here's how to create and activate a virtual environment using `venv` (available in Python 3.3+):
+
+
+        python -m venv myenv
+        source myenv/bin/activate  # macOS/Linux
+        venv\Scripts\activate.bat  # Windows
+
+
+Install dbt-bigquery within the environment:
+Once your environment is activated, install the dbt-bigquery package using pip:
+
+        pip install dbt-bigquery
+
+Check this link for more information: 
+["https://pypi.org/project/dbt/"]
+
 
 **Setting Up BigQuery:**
 
