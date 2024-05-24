@@ -142,6 +142,9 @@ Use filters and drill-downs to analyze specific data segments.
 
 Share your reports and dashboards with collaborators for better decision-making.
 
+[gcp-bigquery-with-dbt-project.pdf](https://github.com/NickolasB98/dbt-bigquery-de-project/files/15435769/gcp-bigquery-with-dbt-project.pdf)
+
+
 ## Conclusion
 
 This project showcases a powerful combination of DBT, BigQuery, and Looker Studio for a complete data transformation, warehousing, and visualization workflow. By leveraging these tools, you can transform raw data into actionable insights that drive informed business decisions.
