@@ -193,14 +193,19 @@ Run the script
                 dbt test
 <img width="765" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/e8064d12-e60b-4116-9e99-9fc348f1a74e">
 
-**Generating the DBT Docs**
+**Generating DBT Documentation**
 
-Run the script 
-                dbt docs generate
-Then            
-                dbt docs serve
+This project leverages DBT's built-in documentation generation capabilities to create comprehensive documentation for your data models. This documentation serves as a valuable resource for understanding the data transformations within your project.
 
-This will be the output of your generating documents in your local DBT.
+#### Steps:
+
+**Generate Documentation:**
+
+Run the command dbt docs generate in your terminal. This command instructs DBT to process your models and generate the documentation files.
+
+**Serve Documentation Locally:**
+
+Once generated, you can view the documentation locally by running dbt docs serve. This will launch a web server serving the documentation files within your local DBT directory. You can typically access it by opening http://localhost:8080 in your web browser.
 
 <img width="1337" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/ce114635-643c-4753-89de-dd7240a006c5">
 
