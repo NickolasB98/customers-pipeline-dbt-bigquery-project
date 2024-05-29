@@ -8,7 +8,7 @@ BigQuery is then connected to Google Looker Studio for BI Visualization.
 
 ### Introduction
 
-In today's data-driven world, DBT and BigQuery have become essential tools for data engineers and analysts. DBT simplifies data transformation with its SQL-based approach, while BigQuery offers a powerful and scalable data warehouse. Together, they provide a streamlined workflow for managing data pipelines.
+DBT and BigQuery have become essential tools for data engineers and analysts. DBT simplifies data transformation with its SQL-based approach, while BigQuery offers a powerful and scalable data warehouse. Together, they provide a streamlined workflow for managing data pipelines.
 
 #### Key Features
 
