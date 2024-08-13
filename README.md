@@ -3,7 +3,7 @@
 This project demonstrates a practical use case for combining DBT (Data Build Tool) and Google BigQuery for data transformation and warehousing.
 BigQuery is then connected to Google Looker Studio for BI Visualization.
 
-<img width="677" alt="image" src="https://github.com/NickolasB98/dbt-bigquery-de-project/assets/157819544/a5ae5cba-b1ad-4d19-88ce-eed086e5b88e">
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/cd6a48d3-1be8-4e33-92b1-f429f6a768bd">
 
 
 ### Introduction
